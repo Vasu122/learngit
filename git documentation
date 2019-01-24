@@ -50,6 +50,7 @@ Learn git part 1:
 9) Delete the branch on github :
 	git push origin :[name_of_your_new_branch]
 10) 			 
-
+11) Merge branch from dev to master:( your current branch is master)
+	git merge dev
 	
 
