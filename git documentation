@@ -32,7 +32,7 @@ Learn git part 1:
 
 
 1) Create the branch on your local machine and switch in this branch 
-	git checkout -b [name_of_your_new_branch]
+	git checkout -b [name_of_your_new_branch] or git branch branchName
 2) Change working branch :
 	git checkout [name_of_your_new_branch]
 3) Push the branch on github :
