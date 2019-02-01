@@ -70,9 +70,11 @@ Learn git part 1:
         git stash list // show all stash file from archieve
         git stash pop // changes comming and show for push or commit.	
         git stash drop // stash file delete for always
-        git statsh save "save name for future"   //
-        git stash apply {Unique Id} //stash@{0}
-        git stash drop {uniqueid} //stash@{0}
-        git stash clean // for all stash list clean
+        git statsh save "save name for future"   // for save in future
+        git stash apply {Unique Id} //stash@{0}  // return in file
+        git stash drop {uniqueid} //stash@{0}  // delete 
+        git stash clean // for all stash list clean  // stash list clean
+        git stash -p //  for interactive mode
+        
 
 
