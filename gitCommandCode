@@ -114,7 +114,10 @@ Learn git part 1:
         and then go to settings then ssh and gps keys click
         then paste code in ssh field.        
                 
-                
+
+// how to make your git commands shorter
+        
+        git config --global alias.co checkout  // checkout short name co                
                         
 
 
