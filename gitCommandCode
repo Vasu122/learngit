@@ -76,5 +76,45 @@ Learn git part 1:
         git stash clean // for all stash list clean  // stash list clean
         git stash -p //  for interactive mode
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+// remote setting for user1
+        git init
+        git add index.html
+        git commit -m "initial commit"
+        git remote -v  // no any remote
+        git push origin master
+        
+// remote setting for user2
+        git clone https://github.com/Vasu122/testGit.git
+        git checkout -b branchname
+        
+        
+
+// Git Cherry-pick
+
+        git log        
+        git cherry-pick 
+        
+// ssh key generate and set
+        
+        ssh-keygen
+        /home/vasudev/.ssh/id_rsa.pub. // location of ssh key // pub means public file
+        and then go to settings then ssh and gps keys click
+        then paste code in ssh field.        
+                
+                
+                        
 
 
