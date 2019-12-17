@@ -117,7 +117,137 @@ Learn git part 1:
 
 // how to make your git commands shorter
         
-        git config --global alias.co checkout  // checkout short name co                
+        git config --global alias.co checkout  // checkout short name co      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+webpack.config.js
+var webpack = require("webpack");
+var path = require("path");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+ 
+var config = {
+    entry: {
+home:'./private/index.jsx'
+    },
+    output: {
+        path: './public',        
+        filename: 'bundle.js'
+    },
+  module: {
+    loaders: [
+{
+test : /\.jsx$/,
+loader: "babel-loader",
+exclude:/node_modules/,
+    },
+{
+test: /\.json$/,
+loader: 'json-loader'
+       },
+{
+test: /\.scss$/, 
+loader: ExtractTextPlugin.extract('css!sass')
+},
+{
+test: /\.(mp4|ogg|svg|eot|ttf|woff|woff2|jpg|png)$/,
+loader: 'file-loader'
+}
+  ]
+  },
+ 
+plugins: [
+        new ExtractTextPlugin("[name].css")
+    ],
+      resolve: {
+extensions: ['', '.js', '.jsx', '.json'],
+alias: {
+           	react: __dirname + '/node_modules/react'
+       	}	
+}
+};
+ 
+module.exports = config;
+
+
+server.js
+
+var express=require('express');
+var path=require('path');
+
+var app=express();
+
+app.use(express.static('./public'));
+
+app.use('/',function(req,res){
+
+res.sendFile(path.resolve('index.html'));
+});
+
+var port=3000;
+app.listen(port, function(error){
+if(error) 
+throw error;
+console.log("Express server listning on port",port);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10
+
+I just tried this and it worked:
+
+create-react-app myapp
+
+yarn (or npm) build
+
+Open IIS manager and create a new website
+Point it at your build folder in the newly created react project
+Create a new application pool
+Right click on the app pool and under Process model find Identity, click the three dots
+Select custom and enter your windows credentials.
+If this doesnt work you may need to enable read/write access to the files so right click on the website and select edit permissions
+
+Go to Security and hit edit, select Authenticated Users and on the bottom of the dialog check the modify/full control /read/write boxes where applicable. Do the same for your windows user that should be listed under Groups or user names section. Hit apply/save.
+
+Right click the website and go to Manage Website then browse.
+
+Boom.
+
+
+https://dev.to/sumitkharche/how-to-deploy-react-application-on-iis-server-1ied    /// very very important
+
+https://stackoverflow.com/questions/54941140/how-to-deploy-react-on-iis
+
+https://support.microsoft.com/en-in/help/315122/http-error-404-file-or-directory-not-found-error-message-when-you-requ
+
+https://serverfault.com/questions/948775/how-can-i-debug-windows-server-2016-iis-error-404-file-or-directory-not-found
+          
                         
 
 
