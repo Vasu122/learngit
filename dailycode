@@ -1,0 +1,102 @@
+import React, { Component } from 'react';
+import ProductList from './components/ProductList';
+import { Route, Switch } from "react-router";
+import { Link } from 'react-router-dom'
+import Product from './components/Product';
+import CreateForm from './components/Form';
+
+import RouterBasicExample from './router/Dashboard';
+
+import { ThemeProvider } from '@material-ui/core/styles';  
+
+import {orange} from './theme/orange';
+import {green} from './theme/green';
+import {defaultTheme} from './theme/default';
+import './App.css';
+
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      defaultTheme: green, 
+      themeVal:'' 
+    } 
+  }
+    dropDownOpen =()=>{
+    this.setState({
+      toggle: !this.state.toggle
+    })
+  }
+  localValSet = (value) => {
+    localStorage.setItem('themeColor',value);
+  }
+  themeSelectVal= (e)=> {
+      
+    this.setState({
+      defaultTheme: e.target.value
+    })
+    this.localValSet(e.target.value);
+  }
+  componentDidMount(){
+    this.setState({
+      defaultTheme: localStorage.getItem('themeColor')
+    })
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+     if(nextState.themeVal != ''){
+      this.localValSet(nextState.themeVal)
+      }
+     return true
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    debugger
+     console.log("shouldComponentUpdate--------nextProps",nextProps);
+     console.log("shouldComponentUpdate--------nextState",nextState);
+     if(nextState.themeVal != ''){
+      this.localValSet(nextState.themeVal)
+      }
+     return true
+  }
+
+  render() {
+    console.log("this.state.defaultTheme : ",this.state.defaultTheme);
+    let ab=green;
+    if(this.state.defaultTheme == 'green'){
+      ab=green
+    }
+    else if(this.state.defaultTheme == 'red'){
+      ab=orange
+    }
+    else{
+     ab=defaultTheme 
+    }
+    let themeSelect='themeSelect';
+    if(this.state.toggle){
+      themeSelect='themeSelect open'
+    }
+    else{
+      themeSelect='themeSelect' 
+    }
+    return (
+        <ThemeProvider theme={ab}>
+            <RouterBasicExample />
+            
+        <div className={themeSelect}>
+          <button type="button" onClick={this.dropDownOpen}>C</button>
+        <select id="dropdown" onChange={this.themeSelectVal}>
+        <option value="default" disabled>none</option>
+          <option value="default">Default</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="yellow">Yellow</option>
+        </select>
+        <div>{this.state.themeVal}</div>
+      </div>  
+            
+        </ThemeProvider>
+  )
+}
+}
+
+export default App;
+
