@@ -1,0 +1,28 @@
+for copy paste
+1) ctrl+c then Ctrl+v == aapka cursor khi bhi ho us line pe without select kiye aap copy paste kr sakte ho
+2) Alt+shift+Arrow key
+
+3) multiple line of code jo ek rectunglar form me  ho usko pure ko select krna ho to 
+  Alt+shift+mouse selection ko move krna hai
+4) man lo cursor ko multiple place pe rkhna hai to aap 
+  alt+ mouse click selection for cursor
+
+5) Ctrl + D == whole word selection and then you can find word length ctrl+f
+6) Ctrl + shift + L -- to select all occurance and change or ctrl + F2 press  
+
+
+vs code open 
+
+1) open terminal and then write "code ."
+2) if you want to manually import component then use Ctrl+space+enter
+3) tab ko switch ctrl+Tab
+4) new open terminal -- ctrl+shift+~(tild)
+5) new open terminal open and close (ctrl+~(tild))
+6) sidebar open and close (Ctrl+B)
+7) search for component (Ctrl+p)
+8) screen split krne ke liye  (ctrl+\(backslash))
+9) file ko close krne ke liye (Ctrl + W)
+10) Ctrl+ arrow key for jump (if you want to select particular word in a paragraph)
+11) Ctrl+shift+x(if you want to open the extension plugin)
+
+Note: Are command are apply all language ie, html5, js, and react/angular/vue js
