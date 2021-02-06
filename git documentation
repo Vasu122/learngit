@@ -1,10 +1,17 @@
 git config --global user.email "rabindra@gmail.com"
 git config  --global user.name "Rabindra yadav"
 
+how do i check congig
+
+git config --global user.name
+
+how do i open visual studio
+code .
+
 Learn git part 1:
 
 1) git init
-2) git add [filename] || A
+2) git add [filename] || A  // or // git add -A
 3) git status
 4) git commit -m "msg about change"
 5) git remote add origin repoName
