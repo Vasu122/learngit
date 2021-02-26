@@ -101,4 +101,6 @@ class App extends Component {
 
 export default App;
 
+conflict add 12345
+last add changes
 
