@@ -88,7 +88,7 @@ class App extends Component {
           <option value="default">Default</option>
           <option value="red">Red</option>
           <option value="green">Green</option>
-          <option value="yellow">Yellow</option>
+          <option value="yellow">Yellow 123</option>
         </select>
         <div>{this.state.themeVal}</div>
       </div>  
