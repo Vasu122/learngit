@@ -17,3 +17,6 @@ then you can add and commit
 
 to clear the stash items
 >> git stash clear
+
+
+/****************git stash file ***************/
