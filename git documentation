@@ -118,5 +118,14 @@ Learn git part 1:
 	4. In terminal your commits name will show there skip first one and squash all of rest, put # before all of commits 
 	5. Than command + X and cmd +y
 	6. git push origin branch name
+how do i rebase 
+
+git checkout develop  // then
+git rebase master  // if coming conflict then conflict resolve and then 
+git add . //then
+git rebase --continue // after rebase no any changes
+git checkout master // and then
+git merge feature
+
 
 
