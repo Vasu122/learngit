@@ -77,4 +77,14 @@ Learn git part 1:
         git stash -p //  for interactive mode
         
 
+how do i rebase 
+
+git checkout develop  // then
+git rebase master  // if coming conflict then conflict resolve and then 
+git add . //then
+git rebase --continue // after rebase no any changes
+git checkout master // and then
+git merge feature
+
+
 
