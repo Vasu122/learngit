@@ -1,10 +1,17 @@
 git config --global user.email "rabindra@gmail.com"
 git config  --global user.name "Rabindra yadav"
 
+how do i check congig
+
+git config --global user.name
+
+how do i open visual studio
+code .
+
 Learn git part 1:
 
 1) git init
-2) git add [filename] || A
+2) git add [filename] || A  // or // git add -A
 3) git status
 4) git commit -m "msg about change"
 5) git remote add origin repoName
@@ -86,5 +93,39 @@ git rebase --continue // after rebase no any changes
 git checkout master // and then
 git merge feature
 
+14) squash commit
+ if you want merge the lot's of commit in a commit, that process is called squash
+
+	git rebase -i origin/baseBranch
+	change in terminal s/p/d/e
+	
+	git push origin [current Branch name] -f
+	
+	
+15) latest code fetch, rebase,reset and merge
+
+	1. Giet leest code 
+        1. Git fetch origin
+    	2. create new branch from base branch
+            (1). git checkout -b [your branch name] [base branch name]
+    	3. make changes in code and add files in git repository
+            (1). git add .
+    	4.  Commit the code in git repository
+            (1) Git commit -m ‘commit message’
+    	5. push local branch to git repository
+            (1) git push origin [your branch name]
+	Must Do:
+	1. Make sure your local branch is rebased every day or a suitable point
+	1. If there is no merge conflict and if still you have not push your code than 
+	1. git rebase -i origin/base branch 
+	2. If there is no merge conflict and if you have already push your code at least once
+	1. git push origin branch name -f
+	3. If there are merge conflicts
+	1. Resolve merge conflicts and make sure no force push is done. never remove other developer’s code
+	2. git add .
+	3. git rebase —continue 
+	4. In terminal your commits name will show there skip first one and squash all of rest, put # before all of commits 
+	5. Than command + X and cmd +y
+	6. git push origin branch name
 
 
