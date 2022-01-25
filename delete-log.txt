@@ -1,0 +1,58 @@
+git config --global user.name Rabindra
+git config --global user.email rabindrasingh@smartenergywater.in
+
+check username and email:
+git config --global user.email
+git config --global user.name
+
+for open vs code:
+code .
+
+for initialize git:
+git init
+
+for show hidden file:
+ls -lart
+
+suppose your file data has removed then:
+git checkout about.html
+git checkout -f // for all file
+
+if you want to commit without stagging:
+
+git commit  -a  -m "message here"
+
+for see log
+
+git log -p -2
+
+lot's of command:
+ex: ls, pwd
+
+how do you remove from stagging area:
+
+git rm --cached file-name
+
+how do you remove file from commit area:
+
+git rm  --cached file-name
+then
+git commit -m "deleted the waste file
+
+how do you remove from harddisk
+
+git rm file-name
+or
+git rm -f file-name
+
+how do i create the branch
+
+git branch branchname
+swith the branch
+git checkout branchname
+
+GIT REMOTE
+GIT REMOTE -V
+
+
+
