@@ -70,7 +70,10 @@ Learn git part 1:
 	git merge dev
 
 12) Revert commit code :
-	git revert bcc88f01ea1d7766da3a4f079926c487fb5a1e62
+	1) git revert bcc88f01ea1d7766da3a4f079926c487fb5a1e62
+	2) git push
+	
+
 
 13) stash command
 	git stash
@@ -128,4 +131,6 @@ git merge feature
 	5. Than command + X and cmd +y
 	6. git push origin branch name
 
+
+3) How will remove extra content
 
