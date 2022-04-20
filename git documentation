@@ -127,5 +127,5 @@ git rebase --continue // after rebase no any changes
 git checkout master // and then
 git merge feature
 
-
+by rabindra singh
 
